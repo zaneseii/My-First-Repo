@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I am Louis Zane De Jesus, A fourth-year IT Student major in Systems Development with proven experience delivering end-to-end solutions. Passionate about building accessible and sustainable digital technologies that empower users and drive long-term impact.</p>
+        <img src="zaneresume.png" alt="My Portrait">
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>DentiCare</td>
+                <td>A Web-Based Patient Monitoring and Appointment Management System for Reyes Dental Solutions</td>
+                <td>2026</td>
+            </tr>
+            <tr>
+                <td>Mochitsuki Experiences</td>
+                <td>A web platform that allows users to book appointments and participate in an authentic Japanese mochitsuki experience.</td>
+                <td>2024</td>
+            </tr>
+            <tr>
+                <td>CareToFund</td>
+                <td>A web-based platform that enables users to create charity campaigns and donate securely.</td>
+                <td>2024</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <fieldset>
+                <legend>How did you hear about this portfolio?</legend>
+
+                <input type="radio" id="friend" name="source" value="friend" required>
+                <label for="friend">Friend</label><br>
+
+                <input type="radio" id="social" name="source" value="social-media">
+                <label for="social">Social Media</label><br>
+
+                <input type="radio" id="search" name="source" value="search-engine">
+                <label for="search">LinkedIn</label><br>
+
+                <input type="radio" id="other" name="source" value="other">
+                <label for="other">Other</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Skills / Interests</legend>
+
+                <input type="checkbox" id="webdev" name="skills" value="web-development">
+                <label for="webdev">Web Development</label><br>
+
+                <input type="checkbox" id="design" name="skills" value="design">
+                <label for="design">Python</label><br>
+
+                <input type="checkbox" id="photography" name="skills" value="photography">
+                <label for="photography">Microsoft 365</label>
+            </fieldset><br>
+
+            <label for="comments">Comments or Messages:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>© Louis Zane De Jesus 2026</p>
+    </footer>
+</body>
+</html>
