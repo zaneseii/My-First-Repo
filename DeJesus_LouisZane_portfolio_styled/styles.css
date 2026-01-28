@@ -1,0 +1,103 @@
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 30px;
+    padding: 20px;
+}
+
+header {
+    background-color: #021a31;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+#about {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
+#projects table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#projects th,
+#projects td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+}
+
+#projects th {
+    background-color: #021a31;
+    color: white;
+}
+
+#contact form {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#contact label {
+    display: block;
+    margin-top: 1px;
+}
+
+#contact input,
+#contact textarea {
+    width: 40%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#contact input[type="submit"] {
+    margin-top: 15px;
+    background-color: #021a31;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    background-color: #ecf0f1;
+}
