@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #ffcc00;
+  height: 150px;
+  padding: 10px;
+}
+
+aside {
+  background-color: #9b59b6;
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section {
+  background-color: #1abc9c;
+  height: 300px;
+  width: 876px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #e74c3c;
+  height: 100px;
+}
