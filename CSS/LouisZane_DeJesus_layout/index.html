@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Layout Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo">
+      <i class="fa-brands fa-bootstrap"></i>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">Docs</a>
+      <a href="#">Examples</a>
+      <a href="#">Icons</a>
+      <a href="#">Themes</a>
+      <a href="#">Blog</a>
+    </nav>
+  </div>
+
+  <form class="search-container" role="search">
+    <label for="site-search" class="sr-only">Search</label>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="site-search" class="search" placeholder="Search">
+  </form>
+</header>
+
+<main class="hero">
+  <section class="hero-content">
+    <figure class="hero-logo">
+      <img src="bootstraplogo.png" alt="Bootstrap Logo">
+    </figure>
+    <h1>Build fast, responsive sites with Bootstrap</h1>
+    <p>
+      Powerful, extensible, and feature-packed frontend toolkit.
+      Build and customize with Sass, utilize prebuilt grid system and components, and
+      bring projects to life with powerful JavaScript plugins.
+    </p>
+
+    <div class="buttons">
+      <button class="btn dark">$ npm i bootstrap@5.3.3</button>
+      <button class="btn purple">Read the docs</button>
+    </div>
+
+    <p class="version-info">Currently <strong>v5.3.3</strong> · <a href="#">Download</a> · <a href="#">All releases</a></p>
+  </section>
+</main>
+
+<section class="get-started">
+  <div class="icon-box">
+    <i class="fas fa-angle-left"></i> 
+    <i class="fas fa-angle-right"></i>
+  </div>
+
+  <h2>Get started any way you want</h2>
+  <p>
+    Jump right into building with Bootstrap—use the CDN,
+    install it via package manager, or download the source code.
+  </p>
+  <a href="#">Read installation docs <i class="fa-solid fa-arrow-right"></i></a>
+</section>
+
+</body>
+</html>

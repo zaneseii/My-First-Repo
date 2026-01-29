@@ -1,0 +1,3 @@
+This task took me about 2 hours to finish.
+The struggles I faced on this task is the positioning of some sections especially the search bar.
+Initially, my search bar was aligned to the far right and breaking the layout. I solved this by using Flexbox and grouping the logo and navigation links together. By centering the items and removing the auto margin on the search container, I successfully positioned the search bar in the middle of the header without disrupting the other elements.
