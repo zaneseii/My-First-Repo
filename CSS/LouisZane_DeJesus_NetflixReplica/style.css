@@ -2,27 +2,27 @@
   margin: 0;
   padding: 0;
   font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
+
 .navbar {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  padding: 10px 30px;
+  padding: 15px 50px;
   z-index: 10;
 }
 
 .logo img {
   width: 140px;
-  margin-left: 120px;
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 15px;
-  
 }
 
 .lang-select {
@@ -48,7 +48,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 525px;
+    height: 700px;
     padding: 110px 30px;
     text-align: center;
     color: white;
@@ -382,4 +382,287 @@
 
 .footer-copy {
     color: #b3b3b3;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .trending {
+        padding: 40px 60px;
+    }
+
+    .trending h2,
+    .features h2,
+    .faqs h2 {
+        margin-left: 20px;
+    }
+
+    .trending-filters {
+        margin-left: 20px;
+    }
+
+    .trending-row {
+        gap: 20px;
+    }
+
+    .poster-item {
+        width: 160px;
+    }
+
+    .poster {
+        width: 140px;
+        height: 210px;
+    }
+
+    .trending-row span {
+        font-size: 7rem;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .lang-select {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+        min-width: auto;
+    }
+
+    .btn-signin {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero h3 {
+        font-size: 0.9rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .email-form input[type="email"] {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .email-form input[type="submit"] {
+        width: 100%;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 1rem;
+        height: auto;
+        padding: 14px;
+    }
+
+    .email-form i {
+        display: none;
+    }
+
+    .trending {
+        padding: 30px 20px;
+    }
+
+    .trending h2,
+    .features h2,
+    .faqs h2 {
+        margin-left: 0;
+        font-size: 1.25rem;
+    }
+
+    .trending-filters {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .trending-row {
+        gap: 15px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+    }
+
+    .poster-item {
+        width: 130px;
+    }
+
+    .poster {
+        width: 120px;
+        height: 180px;
+    }
+
+    .trending-row span {
+        font-size: 5rem;
+        bottom: -0.5rem;
+        left: -1rem;
+    }
+
+    .feature-cards {
+        gap: 12px;
+    }
+
+    .feature-card {
+        width: calc(50% - 10px);
+        min-width: 150px;
+        min-height: 200px;
+        padding: 16px 12px;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+        padding: 16px;
+    }
+
+    .faq-icon {
+        font-size: 1.2rem;
+    }
+
+    .faq-email-form p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .faq-email-form .email-input-wrapper {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .faq-email-form input[type="email"] {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .faq-email-form button {
+        width: 100%;
+        border-radius: 4px;
+        justify-content: center;
+        height: auto;
+        padding: 14px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 30px;
+    }
+
+    .footer-content {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .lang-select {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+    }
+
+    .btn-signin {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h3 {
+        font-size: 0.85rem;
+    }
+
+    .poster-item {
+        width: 110px;
+    }
+
+    .poster {
+        width: 100px;
+        height: 150px;
+    }
+
+    .trending-row span {
+        font-size: 4rem;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 14px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
 }
