@@ -15,7 +15,7 @@
 
 .logo img {
   width: 140px;
-  margin-left: 90px;
+  margin-left: 120px;
 }
 
 .nav-actions {
@@ -48,7 +48,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 525px;
     padding: 110px 30px;
     text-align: center;
     color: white;
@@ -127,19 +127,26 @@
     background: black;
     color: white;
     padding: 40px 120px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0 auto;
 }
 
 .trending h2 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
+    margin-left: 40px;
+
 }
 
 .trending-filters {
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
+    margin-left: 40px;
+
 }
 
 .trending-filters select {
@@ -153,25 +160,20 @@
 
 .trending-row {
     display: flex;
-    gap: 30px;
-    overflow-x: auto;
+    justify-content: center;
+    gap: 40px;
     padding-bottom: 15px;
-    padding-left: 30px;
-}
-
-.trending-row::-webkit-scrollbar {
-    display: none;
 }
 
 .poster-item {
     display: inline-block;
     position: relative;
-    margin-top: 3rem;
     flex-shrink: 0;
+    width: 200px;
 }
 
 .poster {
-    width: 160px;
+    width: 170px;
     height: 250px;
     border-radius: 6px;
     flex-shrink: 0;
@@ -196,27 +198,32 @@
     background: black;
     color: white;
     padding: 35px 6px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
 .features h2 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
+    margin-left: 40px;
 }
 
 .feature-cards {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
 }
 
 .feature-card {
     background: linear-gradient(145deg, #1a1a2e, #111);
     border-radius: 12px;
     padding: 20px 14px;
-    width: 200px;
+    width: 260px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -245,10 +252,11 @@
 .faqs h2{
     font-size: 20px;
     color: white;
+    margin-left: 40px;
 }
 
 .faq-list {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -280,17 +288,6 @@
 .faq-icon {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
-}
-
-.faq-answer {
-    display: none;
-    padding: 20px;
-    font-size: 0.95rem;
-    color: #ccc;
-}
-
-.faq-item.active .faq-answer {
-    display: block;
 }
 
 .faq-item.active .faq-icon {
@@ -352,7 +349,7 @@
 }
 
 .footer-content {
-    max-width: 970px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
