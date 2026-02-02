@@ -75,6 +75,8 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .btn-signup {
@@ -84,11 +86,13 @@ body {
     border: 1px solid #ffffff;
     border-radius: 6px;
     cursor: pointer;
+        text-decoration: none;
+
 }
 
 .search-wrapper {
     position: relative;
-    width: 100%;
+    width: 95%;
     right: -280px;
 }
 
@@ -114,7 +118,7 @@ body {
 
 .search-wrapper .slash-icon {
     position: absolute;
-    right: 280px;          
+    right: 243px;          
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
@@ -297,7 +301,7 @@ body {
 .sidebar-trending {
     position: absolute;
     top: 180px;
-    right: 260px;
+    right: 90px;
     width: 300px;
     border: 1px solid #3A4049;
     border-radius: 10px;
