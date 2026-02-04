@@ -52,10 +52,14 @@
 
 .search-form {
     flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .search-form input {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     padding: 8px 10px;
     border: 1px solid #babfc4;
     border-radius: 4px;
@@ -163,7 +167,7 @@
 }
 
 .promo-left h2 {
-    font-family: 'Roboto Slab', serif !important;
+    font-family: 'Roboto Slab', serif;
     font-size: 35px;
     font-weight: 800;
     color: #3B4045;

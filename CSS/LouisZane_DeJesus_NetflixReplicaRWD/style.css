@@ -290,10 +290,6 @@
     transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-icon {
-    transform: rotate(45deg); /* changes + to x shape when active */
-}
-
 .faq-email-form {
     margin-top: 40px;
     text-align: center;
