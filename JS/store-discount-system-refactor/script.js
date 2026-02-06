@@ -54,7 +54,7 @@ function calculateFinalPrice(purchase_amount, discountRate) {
 //Process multiple customers
 
 const customers = [
-    { name: "Zane", customer_type: "member", purchase_amount: 100 },
+    { name: "Zane", customer_type: "member", purchase_amount: 10 },
     { name: "Rui", customer_type: "member", purchase_amount: 800 },
     { name: "Kobe", customer_type: "non-member", purchase_amount: 1200 }
 ];
@@ -66,8 +66,8 @@ for (let i = 0; i < customers.length; i++) {
 
     console.log(
         `${customer.name} (${customer.customer_type}) - ` +
-        `Original: $${customer.purchase_amount} → ` +
-        `Discount: ${result.discountPercent}% ($${result.discountAmount}) → ` +
+        `Original: $${customer.purchase_amount} - ` +
+        `Discount: ${result.discountPercent}% ($${result.discountAmount}) = ` +
         `Final: $${result.finalPrice}`
     );
 }
