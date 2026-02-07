@@ -1,11 +1,11 @@
 //Task 1: Custom Array Filter
 
 function customFilter(arr, callback) {
-    var result = []; // this will store all elements that pass the test
+    let result = []; // this will store all elements that pass the test
 
     // loop through each item in the array
-    for (var i = 0; i < arr.length; i++) {
-        var current = arr[i]; // current element
+    for (let i = 0; i < arr.length; i++) {
+        let current = arr[i]; // current element
 
         // if callback returns true → keep the element
         if (callback(current)) {
@@ -20,14 +20,14 @@ function isEven(num) {
     return num % 2 === 0;
 }
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var evenNumbers = customFilter(numbers, isEven);
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNumbers = customFilter(numbers, isEven);
 console.log(evenNumbers); 
 
 //Task 2: Countdown Timer
 
 function countdown(start, callback) {
-    for (var i = start; i >= 0; i--) {
+    for (let i = start; i >= 0; i--) {
         (function(n) {
             setTimeout(function() {
                 callback(n);
@@ -79,7 +79,7 @@ createButton("Click Me", buttonClicked);
 //Task 4: Task Runner
 
 function runTasks(tasks) {
-    var i = 0;
+    let i = 0;
 
     function runNext() {
         if (i < tasks.length) {
@@ -112,14 +112,14 @@ runTasks([task1, task2, task3]);
 
 function askQuestion(question, choices, correctAnswer, callback) {
     // Simulated user response
-    var userResponse = "4";
+    let userResponse = "4";
 
     console.log(question);
     console.log("Choices: " + choices.join(", "));
     console.log("User response: " + userResponse);
 
     // Check if the answer is correct
-    var isCorrect = userResponse === correctAnswer;
+    let isCorrect = userResponse === correctAnswer;
     callback(isCorrect); // call the callback
 }
 
