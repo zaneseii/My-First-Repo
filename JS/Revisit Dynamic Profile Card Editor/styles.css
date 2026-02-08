@@ -76,11 +76,4 @@ form input{
     height: 30px;
     margin-top: 4px;
     border: 1px solid #c7c7c7;
-    width: 100%;
-}
-
-form input[type="color"]{
-    padding: 0;
-    height: 12px;
-    width: 100%;
 }
