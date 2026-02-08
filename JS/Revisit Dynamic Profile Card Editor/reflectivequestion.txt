@@ -1,0 +1,2 @@
+The features I will add to improve the UX will be an alert message once I updated the profile. Also, I will add an error validation if the user forgot to fill a required field,
+uploaded an invalid img source, and invalid characters. Lastly, I will add a full reset button that resets everything to its default value.
