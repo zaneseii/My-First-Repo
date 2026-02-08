@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Selector</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -32,17 +33,13 @@
             font-size: 16px;
             font-weight: bold;
         }
+
         .red { background-color: red; }
         .blue { background-color: blue; }
         .green { background-color: green; }
         .yellow { background-color: yellow; }
         .purple { background-color: purple; }
         .orange { background-color: orange; }
-
-        .row {
-            display: flex;
-            justify-content: center;
-        }
 
     </style>
 </head>
@@ -51,22 +48,13 @@
     <h1>Color Selector</h1>
     <p>Click a color to change the background.</p>
     <div id="container">
-    <div class="row">
         <button class="color-box red">Red</button>
         <button class="color-box blue">Blue</button>
         <button class="color-box green">Green</button>
-    </div>
-
-    <div class="row">
         <button class="color-box yellow">Yellow</button>
         <button class="color-box purple">Purple</button>
         <button class="color-box orange">Orange</button>
     </div>
-</div>
-
-<style>
-    
-</style>
 
 <script>
     document.getElementById("container").addEventListener("click", function() {
