@@ -1,13 +1,21 @@
-// Task 1: Custom Map Function
-
+/*  
+ * DOCU: Applies a callback function to each element of an array and returns a new transformed array  
+ * @param {Array} arr - The array to iterate over  
+ * @param {Function} callback - Function applied to each array element  
+ * @returns {Array} - A new array containing transformed values  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customMap(arr, callback) {
-    let result = []; // store the transformed results
+    let result = [];
 
-    for (let i = 0; i < arr.length; i++) {  // Loop through each element of the array
-        result.push(callback(arr[i]));  // Call the callback with the current element and push the result
+    for (let i = 0; i < arr.length; i++) {
+        result.push(callback(arr[i]));
     }
 
-    return result; // return the new array
+    return result;
 }
 
 let numbers = [1, 2, 3];
@@ -18,87 +26,117 @@ let doubled = customMap(numbers, function(num) {
 
 console.log(doubled); // Output: [2, 4, 6]
 
-// Task 2: Custom Filter Function
 
+
+/*  
+ * DOCU: Filters elements of an array based on a callback condition  
+ * @param {Array} arr - The array to filter  
+ * @param {Function} callback - Function that returns true for elements to keep  
+ * @returns {Array} - New array containing only elements that passed the test  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customFilter(arr, callback) {
-    let result = []; // store elements that pass the test
+    let result = [];
 
-    // Loop through each element in the array
     for (let i = 0; i < arr.length; i++) {
-        // If the callback returns true = keep the element
         if (callback(arr[i])) {
             result.push(arr[i]);
         }
     }
 
-    return result; // return the filtered array
+    return result;
 }
 
 let numbers2 = [1, 2, 3, 4, 15];
 
-// Keep only numbers less than 10
 let result = customFilter(numbers2, function(val) {
     return val < 10;
 });
 
 console.log(result); // Output: [1, 2, 3, 4]
 
-// Task 3: Custom Some Function
 
+
+/*  
+ * DOCU: Checks if at least one element in the array satisfies the callback condition  
+ * @param {Array} arr - The array to evaluate  
+ * @param {Function} callback - Condition function executed on each element  
+ * @returns {Boolean} - True if any element satisfies the condition, otherwise false  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customSome(arr, callback) {
-    // Loop through each element in the array
     for (let i = 0; i < arr.length; i++) {
-        // If callback returns true for any element → return true immediately
         if (callback(arr[i])) {
             return true;
         }
     }
-    // If no element passed the test → return false
     return false;
 }
 
 let numbers3 = [1, 2, 3, 4];
 
-// Check if any number is greater than 5
 let result2 = customSome(numbers3, function(val) {
     return val > 5;
 });
 
 console.log(result2);
 
-// Task 4: Custom Every Function
+
+
+/*  
+ * DOCU: Checks if all elements in an array satisfy the callback condition  
+ * @param {Array} arr - The array to evaluate  
+ * @param {Function} callback - Condition function applied to each element  
+ * @returns {Boolean} - True if all elements meet the condition, otherwise false  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customEvery(arr, callback) {
-    // Loop through each element in the array
     for (let i = 0; i < arr.length; i++) {
-        // If callback returns false for any element → return false immediately
         if (!callback(arr[i])) {
             return false;
         }
     }
-    // If all elements passed the test = return true
     return true;
 }
 
 let numbers4 = [1, 2, 3];
 
-// Check if all numbers are greater than 0
 let result3 = customEvery(numbers4, function(val) {
     return val > 0;
 });
 
 console.log(result3);
 
-// Task 5: Custom Reduce Function
 
+
+/*  
+ * DOCU: Reduces an array to a single value using an accumulator and callback function  
+ * @param {Array} arr - The array to reduce  
+ * @param {Function} callback - Function that processes each element into the accumulator  
+ * @param {any} initialValue - Starting value of the accumulator  
+ * @returns {any} - Final accumulated value  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customReduce(arr, callback, initialValue = 0) {
-    let accumulator = initialValue; // start with initial value
+    let accumulator = initialValue;
 
-    // Loop through each element in the array
     for (let i = 0; i < arr.length; i++) {
         accumulator = callback(accumulator, arr[i]);
     }
 
-    return accumulator; // return the final accumulated result
+    return accumulator;
 }
 
 let numbers5 = [1, 2, 3];
@@ -109,33 +147,31 @@ let sum = customReduce(numbers5, function(acc, num) {
 
 console.log(sum);
 
-// Task 6: Custom Includes Function
 
+
+/*  
+ * DOCU: Checks if any element in the array satisfies the callback condition  
+ * @param {Array} arr - The array to search  
+ * @param {Function} callback - Condition function used to test each element  
+ * @returns {Boolean} - True if any element matches the condition, otherwise false  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function customIncludes(arr, callback) {
-    // Loop through each element
     for (let i = 0; i < arr.length; i++) {
-        // If callback returns true for any element → return true
         if (callback(arr[i])) {
             return true;
         }
     }
-    // If no element passed the test → return false
     return false;
 }
 
 let numbers6 = [1, 2, 3];
 
-// Check if 2 is in the array
 let result4 = customIncludes(numbers6, function(val) {
     return val === 2;
 });
 
-console.log(result4); 
-
-
-
-
-
-
-
-
+console.log(result4);

@@ -1,12 +1,33 @@
-// Generates a random integer between min and max (inclusive)
+/*  
+ * DOCU: Generates a random integer between the given min and max values (inclusive)  
+ * @param {number} min - The minimum integer value  
+ * @param {number} max - The maximum integer value  
+ * @returns {number} - A randomly generated integer between min and max  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function randomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Returns a random item from any provided array
+
+
+/*  
+ * DOCU: Returns a random element from the provided array  
+ * @param {Array} items - The array to pick a random value from  
+ * @returns {any} - A randomly selected item from the array  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function randomFromArray(items) {
 	return items[randomInt(0, items.length - 1)];
 }
+
+
 
 // 1. Class and Ability Pools
 const classes = ["Warrior", "Mage", "Archer", "Healer", "Assassin"];
@@ -18,44 +39,69 @@ const abilities = [
 	"Power Slash"
 ];
 
-// 2. Base Character Object (Default Values)
-const character = {
-	name: "Hero",                    // Default name
-	health: 100,                     // Default health
-	class: randomFromArray(classes), // Random class
-	specialAbility: randomFromArray(abilities), // Random ability
 
-	// 3. Method to randomize health (50–150)
+
+// 2. Base Character Object
+const character = {
+	name: "Hero",
+	health: 100,
+	class: randomFromArray(classes),
+	specialAbility: randomFromArray(abilities),
+
+	/*  
+	 * DOCU: Randomizes the character's health within the range of 50–150  
+	 * @returns {void}  
+	 *  
+	 * Last Updated: 2026-02-08  
+	 * Author: Louis Zane De Jesus  
+	 * Last Updated By: Louis Zane De Jesus  
+	 */
 	randomizeHealth() {
 		this.health = randomInt(50, 150);
 	}
 };
 
-// 4. Name Pool for Random Character Generation
+
+
+// 4. Name Pool
 const names = ["Thorin", "Elara", "Zane", "Ivy", "Dante"];
 
-// 5. Function: generateCharacter(name)
+
+
+/*  
+ * DOCU: Generates a new character with optional provided name and randomized attributes  
+ * @param {string} name - Optional name for the character  
+ * @returns {object} - A fully generated character object  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function generateCharacter(name) {
 	const randomName = randomFromArray(names);
 
 	return {
-		name: name || randomName,                 // Provided name OR random one
-		health: randomInt(50, 150),               // Random health
-		class: randomFromArray(classes),          // Random class
-		specialAbility: randomFromArray(abilities), // Random ability
+		name: name || randomName,
+		health: randomInt(50, 150),
+		class: randomFromArray(classes),
+		specialAbility: randomFromArray(abilities),
 
-		// 6. Battle method
+		/*  
+		 * DOCU: Executes a battle action where this character attacks another character  
+		 * @param {object} otherCharacter - The character being attacked  
+		 * @returns {void}  
+		 *  
+		 * Last Updated: 2026-02-08  
+		 * Author: Louis Zane De Jesus  
+		 * Last Updated By: Louis Zane De Jesus  
+		 */
 		battle(otherCharacter) {
-			const damage = randomInt(5, 20);      // Random attack damage
+			const damage = randomInt(5, 20);
 			const previousHealth = otherCharacter.health;
 
-			// Subtract damage from opponent's health
 			otherCharacter.health -= damage;
-
-			// Prevent health from going negative
 			if (otherCharacter.health < 0) otherCharacter.health = 0;
 
-			// Battle log
 			console.log(
 				`Character ${this.name} attacked Character ${otherCharacter.name} ` +
 				`with ${this.specialAbility}. ${otherCharacter.name}'s health dropped from ` +
@@ -65,7 +111,17 @@ function generateCharacter(name) {
 	};
 }
 
-// 7. Creates an array ("party") of x randomly generated characters.
+
+
+/*  
+ * DOCU: Generates an array of randomly created characters  
+ * @param {number} x - Number of characters to generate  
+ * @returns {Array} - An array containing x generated character objects  
+ *  
+ * Last Updated: 2026-02-08  
+ * Author: Louis Zane De Jesus  
+ * Last Updated By: Louis Zane De Jesus  
+ */
 function generateMultipleCharacters(x) {
 	const party = [];
 
@@ -76,9 +132,10 @@ function generateMultipleCharacters(x) {
 	return party;
 }
 
+
+
 // TESTS
 
-//  Test 1: Generate a character (random + named) 
 console.log("\n=== Character Test ===");
 const randomCharacter = generateCharacter();
 console.dir(randomCharacter);
@@ -86,7 +143,7 @@ console.dir(randomCharacter);
 const namedCharacter = generateCharacter("Drake");
 console.dir(namedCharacter);
 
-//  Test 2: Battle Simulation 
+
 console.log("\n=== Battle Test ===");
 const character1 = generateCharacter("Zane");
 const character2 = generateCharacter("Elara");
@@ -95,8 +152,7 @@ console.log(character1);
 console.log(character2);
 character1.battle(character2);
 
-//  Test 3: Generate Party of 5 
+
 console.log("\n=== Party Test ===");
 const party = generateMultipleCharacters(5);
 console.dir(party);
-
