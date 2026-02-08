@@ -1,0 +1,4 @@
+Choosing to use event.stopPropagation() in this example is a great way to ensure that when you click a button it does not also trigger the click event of the container,
+which may create twice as many alerts and revert the background colour of the container back to light grey due to being 'clicked' twice because the buttons are child elements to the container.
+Thus by calling event.stopPropagation(), we ensure that only the button action occurs, thus maintaining the proper colour change of the button when the button action occurs, and preventing the container from responding when it is not intended to. 
+In other words, event.stopPropagation() is a way of allowing the button to perform its function while preventing the container from getting interjected in the event.
