@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack in the Box</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        text-align: center;
+        position: relative;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        min-width: 400px;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #jackBox {
+        width: 300px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        z-index: 1;
+    }
+
+    #jackBox:hover {
+        transform: scale(1.05);
+    }
+
+    #jackBox.open {
+        transform: scale(1.1);
+    }
+
+    #boomEffect {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 10;
+    }
+
+    #boomEffect.show {
+        opacity: 1;
+    }
+
+    #revealImage {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        width: 150px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+        z-index: 15;
+    }
+
+    #revealImage.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+
+    #surpriseBtn {
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 2;
+    }
+
+    #surpriseBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(245, 87, 108, 0.6);
+    }
+
+    #surpriseBtn:active {
+        transform: translateY(0);
+    }
+
+</style>
+<body>
+    <main>
+    <img id="jackBox"
+         src="assets/closed.png"
+         data-closed="assets/closed.png"
+         data-open="assets/opened.png"
+         alt="Jack in the Box">
+
+    <img id="boomEffect" src="assets/boom.gif" alt="Boom Effect">
+
+    <img id="revealImage" src="assets/diamond.png" alt="Jack Character">
+
+    <button id="surpriseBtn">Open the Box</button>
+
+    <audio id="popSound" src="assets/open.mp3"></audio>
+</main>
+</body>
+<script>
+    const jackBox = document.getElementById("jackBox");
+    const button = document.getElementById("surpriseBtn");
+    const sound = document.getElementById("popSound");
+    const boomEffect = document.getElementById("boomEffect");
+    const revealImage = document.getElementById("revealImage");
+
+    // Function to open the box
+    function openBox() {
+        const openImg = jackBox.getAttribute("data-open");
+        jackBox.src = openImg;
+        jackBox.classList.add("open");
+
+        // Show boom effect
+        boomEffect.classList.add("show");
+
+        // Show reveal image after a slight delay
+        setTimeout(() => {
+            revealImage.classList.add("show");
+        }, 300);
+
+        // Play optional sound
+        sound.play();
+
+        // Hide boom effect after 1 second
+        setTimeout(() => {
+            boomEffect.classList.remove("show");
+        }, 1000);
+
+        // Close again after 2.5 seconds
+        setTimeout(closeBox, 2500);
+    }
+
+    // Function to close the box
+    function closeBox() {
+        const closedImg = jackBox.getAttribute("data-closed");
+        jackBox.src = closedImg;
+        jackBox.classList.remove("open");
+        revealImage.classList.remove("show");
+    }
+
+    // Event listeners
+    jackBox.addEventListener("click", openBox);
+    button.addEventListener("click", openBox);
+
+</script>
+</html>
