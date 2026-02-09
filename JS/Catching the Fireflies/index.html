@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Fireflies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('assets/bg1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-family: "Press Start 2P", system-ui;
+        }
+        
+        .firefly {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        .firefly:nth-child(2) { animation-delay: 1s; top: 20%; left: 10%; }
+        .firefly:nth-child(3) { animation-delay: 2s; top: 60%; left: 70%; }
+        .firefly:nth-child(4) { animation-delay: 3s; top: 40%; left: 40%; }
+        .firefly:nth-child(5) { animation-delay: 4s; top: 80%; left: 20%; }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(50px, -30px); }
+            50% { transform: translate(-30px, 50px); }
+            75% { transform: translate(30px, 30px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Catch the Fireflies!</h1>
+    <img src="assets/firefly1.png" class="firefly">
+    <img src="assets/firefly1.png" class="firefly">
+    <img src="assets/firefly1.png" class="firefly">
+    <img src="assets/firefly1.png" class="firefly">
+    <img src="assets/firefly1.png" class="firefly">
+
+  
+    <audio id="pop-sound" src="assets/pop.mp3" preload="auto"></audio>
+
+    <script>
+        let fireflies = document.querySelectorAll(".firefly");
+
+        let popSound = document.getElementById("pop-sound");
+
+        // Attach event listener to each firefly
+        fireflies.forEach(firefly => {
+            firefly.addEventListener("click", function() {
+            popSound.currentTime = 0;
+            popSound.play();
+                let originalSrc = this.src; // Store original image
+                
+                this.style.animation = "none"; // Pause animation
+                this.style.transform = "scale(0.2)"; // Shrink the firefly
+                setTimeout(() => {
+                    // Change to explosion/flash image
+                    this.src = "assets/boom.gif"; // Change to explosion image
+                    this.style.transform = "scale(1.2)"; // Enlarge explosion
+                    
+                    setTimeout(() => {
+                        // Revert back to firefly
+                        this.src = originalSrc;
+                        this.style.transform = ""; // Clear transform
+                        this.style.animation = ""; // Resume animation
+                    }, 1000);
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
