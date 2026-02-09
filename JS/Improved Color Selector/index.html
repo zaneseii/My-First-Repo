@@ -69,11 +69,31 @@
     <h2>Selected Color: <span id="selected-color">None</span></h2>
 
 <script>
+    /*  
+    * DOCU: Alerts the user when the container is clicked and changes its background color.  
+    * @param {void}  
+    * @returns {void}  
+    * @throws {none}  
+    *  
+    * Last Updated: 2026-02-09  
+    * Author: Louis Zane De Jesus  
+    * Last Updated By: Louis Zane De Jesus  
+    */
     document.getElementById("container").addEventListener("click", function() {
         alert("You clicked the container!");
         this.style.backgroundColor = "lightgray";
     });
-
+    
+    /*  
+    * DOCU: Handles clicks on color boxes using event delegation to update UI styles and selected color text.  
+    * @param {Event} e - The click event object.  
+    * @returns {void}  
+    * @throws {none}  
+    *  
+    * Last Updated: 2026-02-09  
+    * Author: Louis Zane De Jesus  
+    * Last Updated By: Louis Zane De Jesus  
+    */
     document.querySelectorAll(".color-box").forEach(button => {
         button.addEventListener("click", function(event) {
             event.stopPropagation(); 
