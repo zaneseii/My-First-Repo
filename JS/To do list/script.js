@@ -1,3 +1,9 @@
+// Select DOM elements
+const form = document.querySelector("form");
+const input = document.querySelector('input[type="text"]');
+const taskCard = document.getElementById("task-card");
+const notificationArea = document.getElementById("notification-area");
+
 /*  
  * DOCU: Displays a notification message on the screen with auto-remove and close button  
  * @param {string} message - The message to be displayed inside the notification  
@@ -22,7 +28,6 @@ function showNotification(message) {
 
   setTimeout(() => note.remove(), 5000);
 }
-
 
 
 /*  

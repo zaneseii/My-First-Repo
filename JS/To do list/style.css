@@ -82,11 +82,12 @@ form input[type="submit"] {
   color: red;
 }
 
-#notifications {
+#notification-area {
   position: fixed;
   top: 20px;
   right: 20px;
   width: 260px;
+  z-index: 1000;
 }
 
 .notification {
