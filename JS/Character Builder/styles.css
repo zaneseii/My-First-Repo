@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #2c2c2c;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.builder-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+#character-preview {
+    border: 3px solid #555;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    position: sticky;
+    top: 20px;
+}
+
+#character-preview h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px #1a6e1a;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 2px solid #444;
+    min-height: 480px;
+    justify-content: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.preview-piece {
+    display: block;
+    width: 130px;
+    object-fit: contain;
+    margin-top: -40px;
+}
+
+
+.preview-piece[src=""] {
+    display: none;
+}
+
+#lock-btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #444;
+    border: 2px solid #979e97;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+#lock-btn:hover {
+    transform: translateY(-2px);
+}
+
+#lock-btn:active {
+    transform: translateY(0);
+}
+
+#confirmation {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+#armor-selections {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.armor-category {
+    background: linear-gradient(145deg, #3d3d3d, #1a1a1a);
+    border: 3px solid #555;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.armor-category h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.armor-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+}
+
+.armor-option {
+    background: #2a2a2a;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.armor-option:hover {
+    border-color: #ffffff;
+    background: #3a3a2a;
+    transform: translateY(-4px);
+}
+
+.armor-option.selected {
+    border-color: #fffd83;
+    background: #f2ff7f;
+}
+
+.armor-option img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.armor-option:hover img {
+    transform: scale(1.15);
+}
+
+.armor-option p {
+    font-size: 0.85rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.armor-option.selected p {
+    color: #000000;
+}
+
+
