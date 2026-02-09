@@ -54,17 +54,16 @@
     <div id="container">
         <div id="row">
             <button class="color-box red">Red</button>
-            <button class="color-box blue">Orange</button>
-            <button class="color-box green">Yellow</button>
+            <button class="color-box orange">Orange</button>
+            <button class="color-box yellow">Yellow</button>
         </div>
         <div id="row">
-            <button class="color-box yellow">Green</button>
-            <button class="color-box indigo">Blue</button>
-            <button class="color-box orange">Indigo</button>
+            <button class="color-box green">Green</button>
+            <button class="color-box blue">Blue</button>
+            <button class="color-box indigo">Indigo</button>
             <button class="color-box violet">Violet</button>
         </div>
-        <div id="row">
-        </div>
+
     </div>
 
     <h2>Selected Color: <span id="selected-color">None</span></h2>
@@ -85,7 +84,7 @@
 
                 document.querySelector("body").style.backgroundColor = window.getComputedStyle(this).backgroundColor;
                 document.getElementById("container").style.backgroundColor = window.getComputedStyle(this).backgroundColor;
-                document.getElementById("selected-color").textContent = "Selected Color: " + this.textContent;
+                document.getElementById("selected-color").textContent = "" + this.textContent;
         });
     });
 </script>
