@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selection - Clash Royale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1> Clash Royale Character Selector </h1>
+
+        <section id="display-area">
+            <div id="character-card">
+                <div class="card-header">
+                    <h2 id="display-name">Select a Character</h2>
+                </div>
+                <div class="card-image">
+                    <img id="display-image" s alt="Character Display">
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-label">❤️ Health</span>
+                        <span class="stat-value" id="display-health">---</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">⚔️ Attack</span>
+                        <span class="stat-value" id="display-attack">---</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">⚡ Speed</span>
+                        <span class="stat-value" id="display-speed">---</span>
+                    </div>
+                </div>
+                <div class="card-description">
+                    <p id="display-description">Select a character to view their details</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="character-grid">
+            <div class="character-card" 
+                 data-name="Barbarians" 
+                 data-health="600" 
+                 data-attack="75" 
+                 data-speed="Medium"
+                 data-description="Four melee fighters with impressive mustaches. Great for defense!"
+                 data-image="assets/barb.png">
+                <img src="assets/barbarian.png" alt="Barbarians">
+                <p class="character-name">Barbarians</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Giant" 
+                 data-health="2000" 
+                 data-attack="150" 
+                 data-speed="Slow"
+                 data-description="Slow but durable, only attacks buildings. The ultimate tank!"
+                 data-image="assets/gia.png">
+                <img src="assets/giant.png" alt="Giant">
+                <p class="character-name">Giant</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Archer" 
+                 data-health="300" 
+                 data-attack="50" 
+                 data-speed="Fast"
+                 data-description="Pair of sharpshooters. Great for ranged support!"
+                 data-image="assets/arch.png">
+                <img src="assets/archers.png" alt="Archer">
+                <p class="character-name">Archer</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Knight" 
+                 data-health="800" 
+                 data-attack="100" 
+                 data-speed="Medium"
+                 data-description="Loyal, fearless, and strong. He's a great value troop!"
+                 data-image="assets/knighty.png">
+                <img src="assets/knight.png" alt="Knight">
+                <p class="character-name">Knight</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Wizard" 
+                 data-health="400" 
+                 data-attack="120" 
+                 data-speed="Medium"
+                 data-description="Deals area damage with fireballs. Devastating from a distance!"
+                 data-image="assets/wizzz.png">
+                <img src="assets/Wiz.png" alt="Wizard">
+                <p class="character-name">Wizard</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="P.E.K.K.A" 
+                 data-health="3000" 
+                 data-attack="200" 
+                 data-speed="Slow"
+                 data-description="Heavily armored powerhouse. Devastating melee damage!"
+                 data-image="assets/pancakes.png">
+                <img src="assets/PEKKA.png" alt="P.E.K.K.A">
+                <p class="character-name">P.E.K.K.A</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Baby Dragon" 
+                 data-health="1000" 
+                 data-attack="150" 
+                 data-speed="Fast"
+                 data-description="Flying troop with splash damage. Can't be targeted by ground units!"
+                 data-image="assets/bbd.png">
+                <img src="assets/BabyD.png" alt="Baby Dragon">
+                <p class="character-name">Baby Dragon</p>
+            </div>
+
+            <div class="character-card" 
+                 data-name="Hog Rider" 
+                 data-health="900" 
+                 data-attack="130" 
+                 data-speed="Fast"
+                 data-description="Fast attacker that only targets buildings. Hog Ridaaaaa!"
+                 data-image="assets/hogrider.png">
+                <img src="assets/Hog.png" alt="Hog Rider">
+                <p class="character-name">Hog Rider</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
