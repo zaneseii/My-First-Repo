@@ -14,11 +14,13 @@
 
     body {
         font-family: 'Arial', sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url('assets/bg.png');
+        background-size: cover;
+        background-position: center;
     }
 
     main {
@@ -92,13 +94,11 @@
         padding: 15px 40px;
         font-size: 18px;
         font-weight: bold;
-        color: white;
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: rgb(0, 0, 0);
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
         text-transform: uppercase;
         letter-spacing: 1px;
         z-index: 2;
@@ -106,7 +106,6 @@
 
     #surpriseBtn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(245, 87, 108, 0.6);
     }
 
     #surpriseBtn:active {
@@ -152,7 +151,6 @@
             revealImage.classList.add("show");
         }, 300);
 
-        // Play optional sound
         sound.play();
 
         // Hide boom effect after 1 second
