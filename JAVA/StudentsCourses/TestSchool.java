@@ -56,34 +56,34 @@ public class TestSchool {
         student3.courses.add(course3);
         student3.courses.add(course4);
 
-        // ---- Print course lists ----
+        /*  Print course lists  */
         System.out.println("\n--- Student Course Lists ---");
 
         printStudentCourses(student1);
         printStudentCourses(student2);
         printStudentCourses(student3);
 
-        // ---- Alice becomes officially enrolled ----
+        /*  Alice becomes officially enrolled  */
         student1.enrolled = true;
         System.out.println("\n" + student1.name + " is now officially enrolled!");
 
-        // ---- Add another course to Alice (Database Systems) ----
+        /*  Add another course to Alice (Database Systems) */
         student1.courses.add(course2);
         System.out.println("Updated courses for " + student1.name + ":");
         printStudentCourses(student1);
 
-        // ---- Change Bob's enrollment status ----
+        /*  Change Bob's enrollment status  */
         student2.enrolled = true;
         System.out.println("\n" + student2.name + " enrollment status: " + student2.enrolled);
         printStudentCourses(student2);
 
-        // ---- Charlie drops Web Development ----
+        /*  Charlie drops Web Development */
         student3.courses.remove(course3);
         System.out.println("\n" + student3.name + " dropped Web Development.");
         printStudentCourses(student3);
     }
 
-    // Helper method to print the student's courses
+    /*  Helper method to print the student's courses  */
     public static void printStudentCourses(Student s) {
         System.out.println(s.name + " (" + s.age + ") enrolled in:");
         for (Course c : s.courses) {
