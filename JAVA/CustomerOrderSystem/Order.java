@@ -47,11 +47,7 @@ public class Order {
     }
 
     public String getStatusMessage() {
-        if (this.ready) {
-            return "Your order is ready.";
-        } else {
-            return "Thank you for waiting. Your order will be ready soon.";
-        }
+        return this.ready ? "Your order is ready." : "Thank you for waiting. Your order will be ready soon.";
     }
 
     public double getOrderTotal() {
