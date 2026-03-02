@@ -3,10 +3,10 @@ package CustomerOrderSystem;
 public class TestOrder {
     public static void main(String[] args) {
 
-        Item coffee = new Item("Cheesecake", 3.00);
-        Item latte = new Item("Red Velvet", 4.25);
-        Item muffin = new Item("Garlic Bread", 2.50);
-        Item tea = new Item("Cinnamon Roll", 2.75);
+        Item cheesecake = new Item("Cheesecake", 3.00);
+        Item cake = new Item("Red Velvet", 4.25);
+        Item bread = new Item("Garlic Bread", 2.50);
+        Item cinnamon = new Item("Cinnamon Roll", 2.75);
         Item cookie = new Item("Chocolate Chip Cookie", 1.75);
 
         Order order1 = new Order();
@@ -16,20 +16,20 @@ public class TestOrder {
         Order order4 = new Order("Bron");
         Order order5 = new Order("Kobe");
 
-        order1.addItem(coffee);
-        order1.addItem(muffin);
+        order1.addItem(cheesecake);
+        order1.addItem(bread);
 
-        order2.addItem(latte);
+        order2.addItem(cake);
         order2.addItem(cookie);
 
-        order3.addItem(tea);
-        order3.addItem(muffin);
+        order3.addItem(cinnamon);
+        order3.addItem(bread);
 
-        order4.addItem(latte);
-        order4.addItem(coffee);
+        order4.addItem(cake);
+        order4.addItem(cheesecake);
 
         order5.addItem(cookie);
-        order5.addItem(tea);
+        order5.addItem(cinnamon);
 
         order3.setReady(true);
         System.out.println(order3.getName() + ": " + order3.getStatusMessage());
