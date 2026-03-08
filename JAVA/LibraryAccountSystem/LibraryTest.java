@@ -10,7 +10,6 @@ public class LibraryTest {
 
         /* Borrow Test */
         user1.borrowBook();
-        user1.borrowBook();
         user2.borrowBook();
         user3.borrowBook();
 
