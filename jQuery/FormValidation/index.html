@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaccination Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="form-card">
+    <h1>Scheduling Form for Vaccination</h1>
+
+    <form id="vacc-form">
+
+        <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="e.g. Juan">
+        </div>
+
+        <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="e.g. dela Cruz">
+        </div>
+
+        <div class="field">
+            <label for="preferred-date">Preferred Date</label>
+            <input type="text" id="preferred-date" placeholder="mm/dd/yyyy" readonly>
+        </div>
+
+        <div class="field">
+            <label for="vaccine-type">Vaccine Type</label>
+            <select id="vaccine-type">
+                <option value="">-- Select a vaccine --</option>
+                <option value="Pfizer">Pfizer</option>
+                <option value="Moderna">Moderna</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+                <option value="Sinovac">Sinovac</option>
+                <option value="Janssen">Janssen</option>
+            </select>
+        </div>
+
+        <button type="submit">Reserve</button>
+
+    </form>
+</div>
+</body>
+</html>
