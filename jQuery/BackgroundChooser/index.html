@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Chooser</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #main_box {
+            background-color: lightgray;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        #main_box img {
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 10px 0 15px 10px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+            font-family: Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Chooser</h1>
+    <div id="main_box">
+        <img src="img/background1.gif" class="mini_boxes">
+        <img src="img/background2.gif" class="mini_boxes">
+        <img src="img/background3.gif" class="mini_boxes">
+        <img src="img/background4.gif" class="mini_boxes">
+    </div>
+</body>
+<script>
+        $(document).ready(function() {
+
+            $('#main_box').click(function() {
+                $(this).css('background-color', 'lightgray');
+                $(this).css('background-image', 'none');
+
+                $('.mini_boxes').css('border', 'none');
+            });
+
+            $('.mini_boxes').click(function(event) {
+                event.stopPropagation(); 
+
+                var imgSrc = $(this).attr('src');
+
+                $('#main_box').css('background-image', 'url(' + imgSrc + ')');
+                $('#main_box').css('background-color', '');
+
+                $('.mini_boxes').css('border', 'none');
+                $(this).css('border', '4px solid yellow');
+            });
+
+        });
+</script>
+</html>
