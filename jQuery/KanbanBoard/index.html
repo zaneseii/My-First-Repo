@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Kanban Board</h1>
+</header>
+
+<main>
+<div id="board" aria-label="Kanban board">
+
+    <section class="lane" id="todo" aria-labelledby="todo-title">
+        <h2 class="lane-header" id="todo-title">To-do</h2>
+        <ul class="card-list">
+            <li class="card high">
+                <div class="card-title">Design login page UI</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-high">High</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=1" alt="assignee">
+                </div>
+            </li>
+            <li class="card medium">
+                <div class="card-title">Write unit tests for API</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-medium">Medium</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=2" alt="assignee">
+                </div>
+            </li>
+            <li class="card low">
+                <div class="card-title">Update README docs</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-low">Low</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=3" alt="assignee">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="lane" id="inprog" aria-labelledby="inprog-title">
+        <h2 class="lane-header" id="inprog-title">In-progress</h2>
+        <ul class="card-list">
+            <li class="card high">
+                <div class="card-title">Fix checkout bug</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-high">High</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=4" alt="assignee">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="lane" id="approval" aria-labelledby="approval-title">
+        <h2 class="lane-header" id="approval-title">For Approval</h2>
+        <ul class="card-list">
+            <li class="card medium">
+                <div class="card-title">Refactor auth module</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-medium">Medium</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=5" alt="assignee">
+                </div>
+            </li>
+            <li class="card low">
+                <div class="card-title">Add dark mode toggle</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-low">Low</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=6" alt="assignee">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="lane" id="testing" aria-labelledby="testing-title">
+        <h2 class="lane-header" id="testing-title">Testing</h2>
+        <ul class="card-list">
+        </ul>
+    </section>
+
+    <section class="lane" id="done" aria-labelledby="done-title">
+        <h2 class="lane-header" id="done-title">Done</h2>
+        <ul class="card-list">
+            <li class="card low">
+                <div class="card-title">Set up project repo</div>
+                <div class="card-meta">
+                    <span class="card-tag tag-low">Low</span>
+                    <img class="assignee" src="https://i.pravatar.cc/40?img=7" alt="assignee">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+</main>
+
+</body>
+</html>

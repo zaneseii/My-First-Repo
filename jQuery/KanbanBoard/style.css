@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    color: #1e293b;
+    letter-spacing: 1px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    flex: 1;
+    min-height: 0;
+}
+
+.lane {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.lane-header {
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin: 0;
+}
+
+#todo .lane-header { background-color: #1e293b; }
+#inprog .lane-header { background-color: #1e293b; }
+#approval .lane-header { background-color: #1e293b; }
+#testing .lane-header { background-color: #1e293b; }
+#done .lane-header { background-color: #1e293b; }
+
+.card-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    flex: 1;
+    min-height: 60px; 
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 4px solid transparent;
+}
+
+.card:active { cursor: grabbing; }
+
+.card.high { border-left-color: #ef4444; }
+.card.medium { border-left-color: #f59e0b; }
+.card.low { border-left-color: #22c55e; }
+
+.card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-tag {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.tag-high { background-color: #ef4444; }
+.tag-medium { background-color: #f59e0b; }
+.tag-low { background-color: #22c55e; }
+
+.assignee {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+
+.ui-sortable-placeholder {
+    background: #dbeafe;
+    border: 2px dashed #93c5fd;
+    border-radius: 8px;
+    visibility: visible !important;
+    margin-bottom: 8px;
+}
+
+.ui-sortable-helper {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    transform: rotate(2deg);
+}
