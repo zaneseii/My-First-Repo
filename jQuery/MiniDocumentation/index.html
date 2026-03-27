@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini Documentation</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <aside>
+            <ul>
+                <li><a href="#clickSection">.click()</a></li>
+                <li><a href="#hideSection">.hide()</a></li>
+                <li><a href="#showSection">.show()</a></li>
+                <li><a href="#toggleSection">.toggle()</a></li>
+                <li><a href="#slideDownSection">.slideDown()</a></li>
+                <li><a href="#slideUpSection">.slideUp()</a></li>
+                <li><a href="#slideToggleSection">.slideToggle()</a></li>
+                <li><a href="#fadeInSection">.fadeIn()</a></li>
+                <li><a href="#fadeOutSection">.fadeOut()</a></li>
+                <li><a href="#addClassSection">.addClass()</a></li>
+                <li><a href="#beforeSection">.before()</a></li>
+                <li><a href="#afterSection">.after()</a></li>
+                <li><a href="#appendSection">.append()</a></li>
+                <li><a href="#htmlSection">.html()</a></li>
+                <li><a href="#attributeSection">.attr()</a></li>
+                <li><a href="#valueSection">.val()</a></li>
+                <li><a href="#textSection">.text()</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h1>My Mini Documentation</h1>
+
+            <section id="clickSection">
+                <h2>Click</h2>
+                <div class="btn-info">
+                    <button id="clickButton">.click()</button>
+                    <p>Bind an event handler to the "click" event, or trigger that event on an element.</p>
+                </div>
+                <p class="content" id="clickContent">Click Button triggered an alert!</p>
+            </section>
+
+            <section id="hideSection">
+                <h2>Hide</h2>
+                <div class="btn-info">
+                    <button id="hideButton">.hide()</button>
+                    <p>Hide the matched elements.</p>
+                </div>
+                <p class="content hide" id="hideContent">Click the button and I will hide!</p>
+            </section>
+
+            <section id="showSection">
+                <h2>Show</h2>
+                <div class="btn-info">
+                    <button id="showButton">.show()</button>
+                    <p>Display the matched elements.</p>
+                </div>
+                <p class="content" id="showContent">Clicking the button will show me!</p>
+            </section>
+
+            <section id="toggleSection">
+                <h2>Toggle</h2>
+                <div class="btn-info">
+                    <button id="toggleButton">.toggle()</button>
+                    <p>Display or hide the matched elements.</p>
+                </div>
+                <p class="content" id="toggleContent">Click the button and I will toggle hide and show!</p>
+            </section>
+
+            <section id="slideDownSection">
+                <h2>Slide Down</h2>
+                <div class="btn-info">
+                    <button id="slideDownButton">.slideDown()</button>
+                    <p>Display the matched elements with a sliding motion.</p>
+                </div>
+                <p class="content" id="slideDownContent">I slide down here!</p>
+            </section>
+
+            <section id="slideUpSection">
+                <h2>Slide Up</h2>
+                <div class="btn-info">
+                    <button id="slideUpButton">.slideUp()</button>
+                    <p>Hide the matched elements with a sliding motion.</p>
+                </div>
+                <p class="content slideUp" id="slideUpContent">I slide up here!</p>
+            </section>
+
+            <section id="slideToggleSection">
+                <h2>Slide Toggle</h2>
+                <div class="btn-info">
+                    <button id="slideToggleButton">.slideToggle()</button>
+                    <p>Display or hide the matched elements with a sliding motion.</p>
+                </div>
+                <p class="content" id="slideToggleContent">Click the button and I will slide toggle!</p>
+            </section>
+
+            <section id="fadeInSection">
+                <h2>Fade In</h2>
+                <div class="btn-info">
+                    <button id="fadeInButton">.fadeIn()</button>
+                    <p>Display the matched elements by fading them in.</p>
+                </div>
+                <p class="content" id="fadeInContent">I fade in here!</p>
+            </section>
+
+            <section id="fadeOutSection">
+                <h2>Fade Out</h2>
+                <div class="btn-info">
+                    <button id="fadeOutButton">.fadeOut()</button>
+                    <p>Hide the matched elements by fading them out.</p>
+                </div>
+                <p class="content fadeOut" id="fadeOutContent">I fade out here!</p>
+            </section>
+
+            <section id="addClassSection">
+                <h2>Add Class</h2>
+                <div class="btn-info">
+                    <button id="addClassButton">.addClass()</button>
+                    <p>Add the specified class to each element.</p>
+                </div>
+                <p id="addClassContent">Added a class here!</p>
+            </section>
+
+            <section id="beforeSection">
+                <h2>Before</h2>
+                <div class="btn-info">
+                    <button id="beforeButton">.before()</button>
+                    <p>Insert content before each element.</p>
+                </div>
+                <p class="content before" id="beforeContent">This is the content.</p>
+            </section>
+
+            <section id="afterSection">
+                <h2>After</h2>
+                <div class="btn-info">
+                    <button id="afterButton">.after()</button>
+                    <p>Insert content after each element.</p>
+                </div>
+                <p class="content after" id="afterContent">This is the content.</p>
+            </section>
+
+            <section id="appendSection">
+                <h2>Append</h2>
+                <div class="btn-info">
+                    <button id="appendButton">.append()</button>
+                    <p>Insert content at the end of each element.</p>
+                </div>
+                <p class="content append" id="appendContent">Append content will be added after this! </p>
+            </section>
+
+            <section id="htmlSection">
+                <h2>HTML</h2>
+                <div class="btn-info">
+                    <button id="htmlButton">.html()</button>
+                    <p>Get the HTML contents of the first element in the set of matched elements.</p>
+                </div>
+                <p class="content html" id="htmlContent">I am the HTML content!</p>
+            </section>
+
+            <section id="attributeSection">
+                <h2>Attribute</h2>
+                <div class="btn-info">
+                    <button id="attrButton">.attr()</button>
+                    <p>Get the value of an attribute for the first element in the set of matched elements.</p>
+                </div>
+                <p class="content attr" >
+                    <img id="attrContent" src="sad.png" alt="Old Image" width="200">
+                </p>
+            </section>
+
+            <section id="valueSection">
+                <h2>Value</h2>
+                <div class="btn-info">
+                    <button id="valButton">.val()</button>
+                    <p>Get the current value of the first element in the set of matched elements.</p>
+                </div>
+                
+                <div class="content val">
+                    <input type="text" id="nameInput" placeholder="Input something...">
+                    <input type="text" id="displayInput" readonly >
+                </div>
+
+            </section>
+
+            <section id="textSection">
+                <h2>Text</h2>
+                <div class="btn-info">
+                    <button id="textButton">.text()</button>
+                    <p>Get the combined text contents of each element in the set of matched elements.</p>
+                </div>
+                <p class="content text" id="textContent">I am a text!</p>
+            </section>
+        </main>
+
+    </body>
+</html>
