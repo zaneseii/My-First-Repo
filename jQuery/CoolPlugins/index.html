@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewsCo — Brewed from the Heart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="#">BrewsCo</a>
+    <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#stats">Our Story</a>
+    </div>
+</nav>
+
+<section id="hero">
+    <div class="hero-content">
+        <div class="hero-tag">Est. 2018 · Nueva Ecija, PH</div>
+        <h1 class="hero-heading">Every<br>Cup <span>Tells</span><br>A Story.</h1>
+        <p class="typed-line"><span id="typed-text"></span></p>
+        <a href="#menu" class="hero-btn">Explore Our Menu</a>
+    </div>
+</section>
+
+<section id="menu">
+    <p class="section-label" data-aos="fade-up">What We Brew</p>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Our Signatures</h2>
+
+    <div class="menu-slider" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="menu-card">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Espresso">
+            <div class="menu-card-body">
+                <div class="menu-card-name">Classic Espresso</div>
+                <p class="menu-card-desc">Double shot, rich crema, sourced from Benguet highlands.</p>
+                <div class="menu-card-price">₱95</div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Latte">
+            <div class="menu-card-body">
+                <div class="menu-card-name">Caramel Latte</div>
+                <p class="menu-card-desc">Velvety steamed milk, house caramel drizzle, oat milk option.</p>
+                <div class="menu-card-price">₱145</div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&q=80" alt="Cold Brew">
+            <div class="menu-card-body">
+                <div class="menu-card-name">Cold Brew</div>
+                <p class="menu-card-desc">Steeped 18 hours. Smooth, bold, zero bitterness.</p>
+                <div class="menu-card-price">₱160</div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80" alt="Matcha">
+            <div class="menu-card-body">
+                <div class="menu-card-name">Matcha Mist</div>
+                <p class="menu-card-desc">Ceremonial grade matcha, lightly sweetened, topped with foam.</p>
+                <div class="menu-card-price">₱155</div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Flat White">
+            <div class="menu-card-body">
+                <div class="menu-card-name">Flat White</div>
+                <p class="menu-card-desc">Microfoam over a double ristretto. The barista's choice.</p>
+                <div class="menu-card-price">₱130</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-img-wrap" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="Barista">
+        <div class="about-img-badge">Since<br>2018</div>
+    </div>
+    <div class="about-text" data-aos="fade-left" data-aos-delay="150">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Brewed With<br>Intention.</h2>
+        <p>BrewsCo started as a small cart in Gapan, Nueva Ecija. We believed that great coffee didn't need a fancy address — just great beans, honest craft, and a warm space to belong.</p>
+        <p>Today we source directly from farmers in Benguet, Sagada, and Mount Apo. Every cup is a direct line from their hands to yours.</p>
+        <p>We take pride in slow craft. No shortcuts. No syrups from a bottle. Just coffee done right.</p>
+    </div>
+</section>
+
+<section id="stats">
+    <div data-aos="zoom-in" data-aos-delay="0">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Years Open</div>
+    </div>
+    <div data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-number">12K+</div>
+        <div class="stat-label">Cups Served Monthly</div>
+    </div>
+    <div data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Farm Partners</div>
+    </div>
+    <div data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-number">28</div>
+        <div class="stat-label">Menu Items</div>
+    </div>
+</section>
+
+<footer>
+    <a class="nav-logo" href="#">BrewsCo</a>
+    <p>© 2024 BrewsCo Coffee. Nueva Ecija, Philippines.</p>
+</footer>
+
+
+
+
+</body>
+</html>
